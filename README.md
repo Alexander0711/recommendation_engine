@@ -41,7 +41,10 @@ In order to build better recommendations for the users of the platform, we will 
 
 Finally, we will perform a machine learning approach to building recommendations. Using the user-item interactions, we will build out a ML model. We will get an idea of how well we can predict new articles an individual might interact with.
 
+1.3 Data for the project 
 
+- user-item-interactions.csv: file contains user interaction
+- articles_community.csv: file contains articles description
 
 
 <a id='stack'></a>
