@@ -6,9 +6,7 @@
 - [Project Software Stack](#stack)
 - [Graphs](#graphs)
 - [File Structure](#files)
-- [Software Requirements](#sw_requirements)
 - [Conclusion](#conclusion)
-- [Links](#links)
 
 
 <a id='overview'></a>
@@ -88,8 +86,8 @@ Additional libraries:
 <pre>
 .
 ├── data
-│   ├── articles_community.csv-------------------# Data as csv file for articles 
-│   └── user-item-interactions.csv---------------# Data as csv file for user articles interaction
+│   ├── articles_community.csv-------------------# Data as csv file / contains description of articles
+│   └── user-item-interactions.csv---------------# Data as csv file / contains user interaction
 ├── images
 │   ├── Graph_01.png-----------------------------# Graph about user/article interaction
 │   ├── Graph_02.png-----------------------------# Graph about accuracy
@@ -105,7 +103,7 @@ Additional libraries:
 
 <a id='conclusion'></a>
 
-## 6. Conclusion
+## 5. Conclusion
 
 * 50% of individuals interact with 3 articles or fewer.
 * The maximum number of user-article interactions by any 1 user is 364.
