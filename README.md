@@ -4,7 +4,7 @@
 
 - [Project Overview](#overview)
 - [Project Software Stack](#stack)
-- [Run the Project](#run)
+- [Graphs](#graphs)
 - [File Structure](#files)
 - [Software Requirements](#sw_requirements)
 - [Conclusion](#conclusion)
@@ -33,7 +33,7 @@ Before making recommendations of any kind, we will need to explore the data of t
 
 To build recommendations, we will first find the most popular articles simply based on the most interactions. Since there are no ratings for any of the articles, it is easy to assume the articles with the most interactions are the most popular. These are then the articles we might recommend to new users.
 
-1.2.3 User2User Based Collaborative Filtering
+1.2.3 User-User Based Collaborative Filtering
 
 In order to build better recommendations for the users of the platform, we will look at users that are similar in terms of the items they have interacted with. These items could then be recommended to the similar users. This would be a step in the right direction towards more personal recommendations for the users. 
 
@@ -51,30 +51,34 @@ Finally, we will perform a machine learning approach to building recommendations
 
 ## 2. Project Software Stack
 
-The software stack of this project contains three main parts:
+The project uses **Python 3.7** and additional libraries. 
+
+Additional libraries:
+
+* Pandas
+* Numpy
+* Matplotlib
+* Pickle
+* progressbar
+* sklearn
 
 
+<a id='graphs'></a>
 
-<a id='run'></a>
+## 3. Graphs
 
-## 3. Run the Project
 
-xxx
+**_Screenshot 1_**
+
+![Screen](images/Graph_01.png)
 
 **_Screenshot 2_**
 
-![Screen](images/Screenshot2.png)
+![Screen](images/Graph_02.png)
 
+**_Screenshot 3_**
 
-
-
-<a id='runapp'></a>
-
-### 3.3. Run
-
-xxx
-x
-
+![Screen](images/Graph_03.png)
 
 
 <a id='files'></a>
@@ -83,56 +87,45 @@ x
 
 <pre>
 .
-├── xxx
-│   ├── xxx------------------------# xxx
-│       ├── xxx------------------# xxx
-│       └──xx---------------#xxx
-├── xxx
-│   ├── 
-│   ├── xxx.csv-------# x
-│   ├── xxx.csv---------# DAxx
-│   └── xxx.py---------------# Px
-├── x ---------------------------# Px
-├── xxx
-│   └── x.pkl----------------# ML MOx
-│   └── xx.py-----------# PERx
-├──xxx.db----------------# x
+├── data
+│   ├── articles_community.csv-------------------# Data as csv file for articles 
+│   └── user-item-interactions.csv---------------# Data as csv file for user articles interaction
+├── images
+│   ├── Graph_01.png-----------------------------# Graph about user/article interaction
+│   ├── Graph_02.png-----------------------------# Graph about accuracy
+│   └── Graph_03.png-----------------------------# Graph about accuracy and features for train/test split
+├── README.md -----------------------------------# Readme
+├── Recommendation_Engine_IBM_D03.html ----------# Code as html
+├── Recommendation_Engine_IBM_D03.ipynb ---------# Code as Python notebook
 │
+.
 </pre>
 
 
-<a id='sw_requirements'></a>
-
-## 5. Software Requirements
-
-The project uses **Python 3.7** and additional libraries: 
-- _pandas_
-- _numpy_ 
-xxxx
 
 <a id='conclusion'></a>
 
 ## 6. Conclusion
 
-xxx
+* 50% of individuals interact with 3 articles or fewer.
+* The maximum number of user-article interactions by any 1 user is 364.
+* The number of unique articles that have an interaction with a user is 714.
+* The number of unique articles in the dataset is 1051.
+* The number of unique users in the dataset is 5149.
+* The number of user-article interactions in the dataset is 45993.
+* The mosed viewed article in the dataframe was viewed 937 times. 
 
-<a id='links'></a>
+The distribution of how many articles a user interacts with in the dataframe.
 
-## 7. Links
+![Screen](images/Graph_01.png)
 
-x
+The figures in the graph shows that the accuracy of the ML model is very high.
 
-Help: 
+![Screen](images/Graph_03.png)
 
-<a href="https://stackoverflow.com/questions/41967511/removing-non-english-words-from-corpus" target="_blank">Stopwords</a>
+But this could be a bit of a misleading result, because in in the data there is a class imbalance. 
+The data as base for the ML model contain much more zeros than ones.
+Training accuracy increase to near 100% as the number of latent features increases, as we can see in the graph.
+While the testing accuracy decrease as the number of features increases. This could be due to a limited variety in the datasets.
 
 
-
-Ideas, Help and Templates: 
-
-xx
-
-This project was completed as part of the Udacity Data Scientist Nanodegree. 
-Code templates and data were provided by Udacity. The data was originally sourced by IBM.
-
-xxx
